@@ -9,6 +9,8 @@ COPY package.json package-lock.json ./
 RUN npm install --registry=http://10.10.10.180:4873/
 #RUN npm install
 
+ENV REFRESH_AT 2017120501
+
 COPY public/ ./public
 
 EXPOSE 8080

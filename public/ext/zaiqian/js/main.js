@@ -511,6 +511,10 @@ function renderTabbar() {
 			var strBotHtml = `<div class="weui-tab"><div class="weui-tabbar">`;
 			for(i=0;i<5;i++){
 				var item = wechatTab[i];
+				if(item.prefix){
+					// 第三方组件
+					item.h5Url += location.search;
+				}
 				var title = item.title || "";
 				strBotHtml += `<a href="${item.h5Url}" class="weui-tabbar__item">
 				    <img src="${item.iconUrl}" alt="" class="weui-tabbar__icon">

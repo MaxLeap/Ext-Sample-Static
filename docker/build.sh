@@ -8,7 +8,10 @@ else
     Tag="latest"
 fi
 
+URL=10.10.10.160:8010
+#URL=dockerhub.leapcloud.cn:5080
+
 echo "build ..."
-docker build -t dockerhub.leapcloud.cn:5080/ext-sample/ext-sample-zaiqian:${Tag} ..
+docker build -t ${URL}/ext-sample/ext-sample-zaiqian:${Tag} ..
 echo "push ..."
-docker push dockerhub.leapcloud.cn:5080/ext-sample/ext-sample-zaiqian:${Tag}
+docker push ${URL}/ext-sample/ext-sample-zaiqian:${Tag}

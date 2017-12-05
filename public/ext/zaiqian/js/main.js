@@ -506,7 +506,7 @@ function renderTabbar() {
 			'X-ML-AppId': AppId
 		},
 		success: function(data) {
-			var wechatTab = data.menu.wechatMenu;
+			var wechatTab = data.menu.wechatTab;
 			var menuDIvBot = document.getElementById("divBottom");
 			var strBotHtml = `<div class="weui-tab"><div class="weui-tabbar">`;
 			for(i=0;i<5;i++){

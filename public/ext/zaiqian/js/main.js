@@ -1,4 +1,7 @@
 var AppId = "";
+var domain = "https://apiuat.leapcloud.cn";
+// var domain = "https://wonapi.maxleap.cn";
+// var domain = "";
 
 var url_api = "";
 (function(window, document, Math) {
@@ -1947,7 +1950,7 @@ function toContent(obj) {
 	console.log("==========begin");
 	$.ajax({
 		type: 'get',
-		url: "https://wonapi.maxleap.cn/1.0/banner/getBanner?where=%7B%22status%22%3A1%2C%22type%22%3A1%7D",
+		url: domain+"/1.0/banner/getBanner?where=%7B%22status%22%3A1%2C%22type%22%3A1%7D",
 		dataType: "json",
 		headers: {
 			'X-ML-AppId': AppId
@@ -2022,7 +2025,7 @@ function toContent(obj) {
 	});
 	$.ajax({
 		type: 'get',
-		url: "https://wonapi.maxleap.cn/1.0/cms/59967e2414f6450007c4a0d1",
+		url: domain+"/1.0/cms/59967e2414f6450007c4a0d1",
 		dataType: "json",
 		headers: {
 			'X-ML-AppId': AppId
@@ -2036,7 +2039,7 @@ function toContent(obj) {
 	});
 	$.ajax({
 		type: 'get',
-		url: "https://wonapi.maxleap.cn/1.0/quick/getQuick?where=%7B%22status%22%3A1%7D&skip=0&limit=5&order=+seq",
+		url: domain+"/1.0/quick/getQuick?where=%7B%22status%22%3A1%7D&skip=0&limit=5&order=+seq",
 		dataType: "json",
 		headers: {
 			'X-ML-AppId': AppId
@@ -2065,7 +2068,7 @@ function toContent(obj) {
 	});
 	$.ajax({
 		type: 'get',
-		url: "https://wonapi.maxleap.cn/1.0/cms?where=%7B%22cms_type%22:%7B%22$in%22:%5B%225951db5275c3080007bf2ad6%22%5D%7D,%22valid%22:true%7D&order=-createdAt&skip=0&limit=100",
+		url: domain+"/1.0/home/recommendArea/findRecommendAreaArticle/home_area_article/client",
 		dataType: "json",
 		headers: {
 			'X-ML-AppId': AppId
@@ -2112,7 +2115,7 @@ function toContent(obj) {
 	});
 	$.ajax({
 		type: 'get',
-		url: "https://wonapi.maxleap.cn/1.0/banner/getBanner?where=%7B%22status%22%3A1%2C%22type%22%3A2%7D",
+		url: domain+"/1.0/banner/getBanner?where=%7B%22status%22%3A1%2C%22type%22%3A2%7D",
 		dataType: "json",
 		headers: {
 			'X-ML-AppId': AppId
@@ -2142,7 +2145,7 @@ function toContent(obj) {
 	});
 	$.ajax({
 		type: 'get',
-		url: "https://wonapi.maxleap.cn/1.0/category?where=%7B%22valid%22%3Atrue%7D&skip=0&limit=6&order=+seq",
+		url: domain+"/1.0/category?where=%7B%22valid%22%3Atrue%7D&skip=0&limit=6&order=+seq",
 		dataType: "json",
 		headers: {
 			'X-ML-AppId': AppId
@@ -2164,9 +2167,9 @@ function toContent(obj) {
 					for (var i = 0; i < item.secondary.length; i++) {
 						ids += (ids == "" ? "" : ",") + item.secondary[i].id
 					}
-					sUrl = "https://wonapi.maxleap.cn/1.0/category/getSimpleProductsByCategoryIds/client?where=%7B%22valid%22%3Atrue,%22obvious%22%3Atrue%7D&categoryIds=" + ids + "&skip=0&limit=3&order=+obviousSeq"
+					sUrl = domain+"/1.0/category/getSimpleProductsByCategoryIds/client?where=%7B%22valid%22%3Atrue,%22obvious%22%3Atrue%7D&categoryIds=" + ids + "&skip=0&limit=3&order=+obviousSeq"
 				} else {
-					sUrl = "https://wonapi.maxleap.cn/1.0/category/" + item.id + "/simpleProducts/client?where=%7B%22valid%22%3Atrue,%22obvious%22%3Atrue%7D&skip=0&limit=3&order=+obviousSeq"
+					sUrl = domain+"/1.0/category/" + item.id + "/simpleProducts/client?where=%7B%22valid%22%3Atrue,%22obvious%22%3Atrue%7D&skip=0&limit=3&order=+obviousSeq"
 				}
 				var strPrd = "<table width='100%' border='0' cellspacing='0' cellpadding='0' class='tdkj1' id='prd_" + index + "'><tbody>";
 				strPrd += "<tr align='center' style='line-height: 0px'><td class='tdkj2' width='33%'>&nbsp;</td><td class='tdkj2' width='33%'>&nbsp;</td><td class='tdkj2' width='33%'>&nbsp;</td></tr>";
@@ -2222,7 +2225,7 @@ function toContent(obj) {
 	});
 	$.ajax({
 		type: 'get',
-		url: "https://wonapi.maxleap.cn/1.0/banner/getBanner?where=%7B%22status%22%3A2%2C%22type%22%3A1%7D&skip=0&limit=6&order=+sort",
+		url: domain+"/1.0/banner/getBanner?where=%7B%22status%22%3A2%2C%22type%22%3A1%7D&skip=0&limit=6&order=+sort",
 		dataType: "json",
 		headers: {
 			'X-ML-AppId': AppId
@@ -2250,7 +2253,7 @@ function toContent(obj) {
 	});
 	$.ajax({
 		type: 'get',
-		url: "https://wonapi.maxleap.cn/1.0/recommendArea/findRecommendAreaAndProductByRecommendArea/client/home_bottom?where=%7B%22enable%22%3Atrue%7D&productLimit=100",
+		url: domain+"/1.0/recommendArea/findRecommendAreaAndProductByRecommendArea/client/home_bottom?where=%7B%22enable%22%3Atrue%7D&productLimit=100",
 		dataType: "json",
 		headers: {
 			'X-ML-AppId': AppId
